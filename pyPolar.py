@@ -38,4 +38,6 @@ print f
            print parsedRaw
         
         #see issue in ?? on $ position
+        
+        Sjekk https://code.google.com/p/pynmea/issues/detail?id=3
 '''

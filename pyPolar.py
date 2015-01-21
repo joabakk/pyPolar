@@ -30,6 +30,7 @@ def test_stream():
 print f
  
    '''
+   current on board~
    streamreader = pynmea2.NMEAStreamReader("/dev/pty23")
     while 1:
         for msg in streamreader.next():
@@ -37,7 +38,18 @@ print f
            parsedRaw = pynmea2.parse(msg)
            print parsedRaw
         
-        #see issue in ?? on $ position
-        
-        Sjekk https://code.google.com/p/pynmea/issues/detail?id=3
+        #see issue in https://code.google.com/p/pynmea/issues/detail?id=3 on $ position
 '''
+
+'''
+#from pynmea:
+from pynmea.streamer import NMEAStreamer
+
+with open('example_data_file.txt', 'r') as data_file:
+    streamer = NMEAStreamer(data_file)
+    next_data = streamer.get_objects()
+    data = []
+    while next_data:
+        data += next_data
+        next_data = streamer(read)
+        '''
